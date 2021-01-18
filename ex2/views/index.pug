@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Classificação e Avaliação da Informação Pública
+  h2 Lista de Classes Nível 1
+
+  if dados.length > 0
+    table
+      tr
+        th Código
+        th Titulo
+
+      each c in dados
+        tr
+          th 
+            a(href='http://localhost:7000/classes/' + c.codigo) #{c.codigo}
+          th= c.titulo
+  else
+    p Ainda não há classes resgistadas ...

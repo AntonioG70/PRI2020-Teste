@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    h1 Página da classe
+    h1 Informação da Classe
+    table
+        tr
+            th Código
+            th Titulo
+            th Status
+            th Descrição
+
+            tr
+                td= dados.codigo
+                td= dados.titulo
+                td= dados.status
+                td= dados.descricao
+    if dados.filhos.length > 0
+        h1 Lista de Descendentes
+        table
+            tr
+                th Código
+                th Titulo
+                th ID
+                th Status
+            each f in dados.filhos    
+                tr
+                    td 
+                        a(href='http://localhost:7000/classes/' + f.codigo) #{f.codigo}
+                    td= f.titulo
+                    td= f.id
+                    td= f.status
+                   
+    if dados.processosRelacionados.length > 0
+        h1 Lista de Processos Relacionados
+        each r in dados.processosRelacionados
+            table
+                tr
+                    th Código
+                    th Tipo Relação
+                    th ID Relação
+                    th Titulo
+                    th Status
+
+                    tr
+                        td 
+                            a(href='http://localhost:7000/classes/' + r.codigo) #{r.codigo}
+                        td= r.tipoRel
+                        td= r.idRel
+                        td= r.titulo
+                        td= r.status     
+
+    a(href='http://localhost:7000/classes/') Voltar à página inicial        
