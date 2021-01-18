@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "file:/C:/Users/anton/OneDrive/Ambiente%20de%20Trabalho/Universidade/PLC/PRI/PR.dtd">
+<PR>
+    <meta>
+        <key>A85813_PRI_TESTE</key>
+        <title>Teste PRI</title>
+        <subtitle>PRI 2020</subtitle>
+        <bdate>18 de janeiro de 2021</bdate>
+        <edate>18 de janeiro de 2021</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85813">
+            <name>António Alexandre Carvalho Lindo</name>
+            <email>a85813@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Ex1:
+        1- Para a limpeza do dataset, coloquei o mesmo no json formater validator (site na internet) para corrigir erros de sintaxe e ainda acrescentei enters e virgulas
+        que faltavam em alguns campos. Depois acrescentei o campo _id através de um script. Para tratar de substituir os '/' por '_' no _id utilizei o control+d
+        em cima do campo _id e alterei todas as '/' para '_' ao mesmo tempo.
+        3- mongoimport --db Casamentos --collection registos --type json --file .\casamentos.json --jsonArray
+        Para correr basta fazer npm install e npm start.
+        </p>
+        <p>Ex2:
+        1- Query 1: São 17: 750.10.001, 750.10.002, 750.10.300, 750.10.600, 750.10.601, 750.10.602, 750.20.001, 750.20.002,750.20.300,750.20.301, 750.20.600, 750.20.601,
+        750.30.001, 750.30.300, 750.30.600, 750.30.601,750.30.602.
+        Query 2: Existem 116
+        Query 3: Existem 5
+        Query: Existem 6
+
+        Para correr basta fazer npm install e npm start. As rotas são /classes e /classes/:cod.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/AntonioG70/PRI2020/tree/main/PRI2020-Teste"></link>
+    </deliverables>
+</PR>
